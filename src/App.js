@@ -49,12 +49,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AddBook 
-          addBook={this.handleAddBook.bind(this)}
-        />
         <Bookshelf 
           books={this.state.books}
           onDelete={this.handleDeleteBook.bind(this)}
+        />
+        <AddBook 
+          addBook={this.handleAddBook.bind(this)}
         />
       </div>
     );

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Book from './Book';
 
+import './bookshelf.css';
+
 export default class Bookshelf extends Component {
 	deleteBook(id) {
 		this.props.onDelete(id);
@@ -22,9 +24,11 @@ export default class Bookshelf extends Component {
 	}
 
 	return (
-		<div>
-			<h1>My bookshelf</h1>
-			{books}
+		<div className="bookshelf">
+			<h1 className="bookshelf__title">My Bookshelf</h1>
+			<div className="bookshelf__books">
+				{books}
+			</div>
 		</div>
 	);
 	}

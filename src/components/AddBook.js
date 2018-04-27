@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import uuid from 'uuid';
 
+import './addBook.css';
 export default class AddBook extends Component {
 	constructor() {
 		super();
@@ -43,7 +44,7 @@ export default class AddBook extends Component {
 		});
 
 		return (
-			<div>
+			<div className="addBook">
 				<h3>Add Book</h3> 
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<div>

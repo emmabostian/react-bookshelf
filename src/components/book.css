@@ -1,0 +1,47 @@
+.book {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  transition: all .1s linear;
+  border-bottom: 4px solid transparent;
+}
+
+.book:hover {
+  border-bottom: 4px solid #40d5bb;
+  cursor: pointer;
+}
+
+.book:hover .book__delete {
+  opacity: 1;
+}
+
+.book__title {
+  font-size: 1.3em;
+}
+
+.book__author {
+  font-size: 1.1em;
+}
+
+.book__delete {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.3em;
+  opacity: 0;
+  transition: all .1s linear;
+}
+
+.book__delete:hover {
+  cursor: pointer;
+}
+
+.book__cover {
+  width: 200px;
+}

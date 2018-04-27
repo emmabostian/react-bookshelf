@@ -64,7 +64,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.handleShowAddBookDialog.bind(this)}>Add Book</button>
+        <button className="App__addBook"onClick={this.handleShowAddBookDialog.bind(this)}>+ Add Book</button>
         <div className="App__overlay"></div>
         <Bookshelf 
           books={this.state.books}

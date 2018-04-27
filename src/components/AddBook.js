@@ -45,21 +45,27 @@ export default class AddBook extends Component {
 
 		return (
 			<div className={this.props.showAddBookDialog ? ['addBook addBook--visible'] : ['addBook']}>
-				<button onClick={this.props.handleShowAddBookDialog}>X</button>
-				<h3>Add Book</h3> 
-				<form onSubmit={this.handleSubmit.bind(this)}>
-					<div>
-						<label>Title</label><br />
-						<input type="text" ref="title" />
-					</div>
-					<div>
-						<label>Author</label><br />
-						<select ref="authors">
-							{authorOptions}
-						</select>
-					</div>
-					<input type="submit" value="Submit"/>
-				</form>
+				<div className="addBook__header">
+					<h3 className="addBook__title">Add Book</h3>
+				</div>
+				<div className="addBook__wrapper">
+					<form onSubmit={this.handleSubmit.bind(this)}>
+						<div className="addBook__formGroup">
+							<label className="addBook__label">Title</label>
+							<input className="addBook__input" type="text" ref="title" />
+						</div>
+						<div className="addBook__formGroup">
+							<label className="addBook__label">Author</label>
+							<select ref="authors" className="addBook__select">
+								{authorOptions}
+							</select>
+						</div>
+						<div className="addBook__btnBar">
+							<button className="addBook__btn addBook__btn--secondary" onClick={this.props.handleShowAddBookDialog}>Cancel</button>
+							<button className="addBook__btn" type="submit" value="Submit">Add</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		)
 	}

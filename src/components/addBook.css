@@ -1,13 +1,100 @@
 .addBook {
   width: 50%;
-  padding: 30px;
-  background-color: #c0f5e8;
+  margin: 30px;
   display: none;
   position: fixed;
   height: 300px;
   z-index: 999;
+  background-color: white;
 }
 
 .addBook--visible {
   display: block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.addBook__wrapper {
+  height: calc(100% - 75px);
+}
+
+.addBook__wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.addBook__header {
+  width: 100%;
+  background-color: #c0f5e8;
+  height: 75px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.addBook__title {
+  font-size: 2em;
+  font-weight: 100;
+  margin: auto 0px auto 15px;
+}
+
+.addBook__formGroup {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.addBook__label {
+  margin-right: 30px;
+  font-weight: 100;
+}
+
+.addBook__input {
+  border: 0;
+  background: transparent;
+  border-bottom: 2px solid #124f44;
+  margin-bottom: 1px;
+  width: 200px;
+  font-size: 1em;
+  font-weight: 100;
+  transition: all .1s linear;
+}
+
+.addBook__input:focus {
+  border-bottom: 3px solid #124f44;
+  margin-bottom: 0;
+  outline: 0;
+}
+
+.addBook__btnBar {
+  display: flex;
+}
+
+.addBook__btn {
+  width: 150px;
+  height: 40px;
+  font-size: 1em;
+  background: #00a78f;
+  color: white;
+  border: none;
+  font-weight: 100;
+  margin-right: 15px;
+  transition: all .1s linear;
+}
+
+.addBook__btn:hover {
+  cursor: pointer;
+  background: #00baa1;
+}
+
+.addBook__btn--secondary {
+  background: none;
+  border: 2px solid #00a78f;
+  color: #00a78f;
+}
+
+.addBook__btn--secondary:hover {
+  background: #00a78f;
+  color: white;
 }

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 100vh;
 }
 
@@ -45,4 +45,22 @@
 
 .App__overlay--visible {
   height: 100vh;
+}
+
+.App__addBook {
+  width: 150px;
+  height: 40px;
+  font-size: 1em;
+  background: #00a78f;
+  color: white;
+  border: none;
+  font-weight: 100;
+  transition: all .1s linear;
+  align-self: flex-end;
+  margin-right: 50px;
+}
+
+.App__addBook:hover {
+  cursor: pointer;
+  background: #00baa1;
 }

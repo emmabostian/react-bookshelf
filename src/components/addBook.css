@@ -2,4 +2,12 @@
   width: 50%;
   padding: 30px;
   background-color: #c0f5e8;
+  display: none;
+  position: fixed;
+  height: 300px;
+  z-index: 999;
+}
+
+.addBook--visible {
+  display: block;
 }

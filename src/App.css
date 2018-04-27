@@ -32,3 +32,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.App__overlay {
+  width: 100vw;
+  height: 0;
+  position: fixed;
+  background: black;
+  z-index: 9;
+  opacity: .8; 
+  transition: height .1s linear;
+}
+
+.App__overlay--visible {
+  height: 100vh;
+}

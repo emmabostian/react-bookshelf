@@ -13,7 +13,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      books: []
+      books: [],
+      showAddBookDialog: false
     }
   }
 
@@ -26,7 +27,21 @@ class App extends Component {
     });
 
     this.setState({
-      books: bookDataWithIds
+      books: bookDataWithIds,
+      showAddBookDialog: false  
+    });
+  }
+
+  handleShowAddBookDialog() {
+    this.setState({
+      showAddBookDialog: !this.state.showAddBookDialog
+    }, () => {
+      const overlay = document.querySelector('.App__overlay');
+      if(this.state.showAddBookDialog) {
+        overlay.classList.add('App__overlay--visible');
+      } else {
+        overlay.classList.remove('App__overlay--visible');
+      }
     });
   }
 
@@ -49,12 +64,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <button onClick={this.handleShowAddBookDialog.bind(this)}>Add Book</button>
+        <div className="App__overlay"></div>
         <Bookshelf 
           books={this.state.books}
           onDelete={this.handleDeleteBook.bind(this)}
         />
         <AddBook 
           addBook={this.handleAddBook.bind(this)}
+          showAddBookDialog={this.state.showAddBookDialog}
         />
       </div>
     );

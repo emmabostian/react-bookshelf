@@ -10,9 +10,11 @@
   width: calc(100vw - 200px);
   background-color: #f7f7f7;
   padding: 0px 100px;
-  height: 400px;
+  min-height: 400px;
   align-items: center;
   flex-wrap: wrap;
+  max-height: 800px;
+  overflow-y: auto;
 }
 
 .bookshelf__title {

@@ -23,19 +23,32 @@ export default class AddBook extends Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		
-		if(!this.refs.title.value) {
+		if(!this.refs.title.value || !this.refs.cover.value) {
 			console.log('Title is required');
 		} else {
 			this.setState({
 				newBook: {
 					title: this.refs.title.value,
 					author: this.refs.authors.value,
+					cover: this.refs.cover.value,
 					id: uuid.v4()
 				}
 			}, () => {
 				this.props.addBook(this.state.newBook);
+				this.resetFormFields();
 			});
 		}
+	}
+
+	resetFormFields() {
+		this.refs.title.value = '';
+		this.refs.cover.value = '';
+		this.refs.authors.value = this.props.authors[0];
+	}
+
+	handleCancelDialog() {
+		this.resetFormFields();
+		this.props.handleShowAddBookDialog();
 	}
 
 	render() {
@@ -60,8 +73,12 @@ export default class AddBook extends Component {
 								{authorOptions}
 							</select>
 						</div>
+						<div className="addBook__formGroup">
+							<label className="addBook__label">Cover</label>
+							<input className="addBook__input" type="text" ref="cover" />
+						</div>
 						<div className="addBook__btnBar">
-							<button className="addBook__btn addBook__btn--secondary" onClick={this.props.handleShowAddBookDialog}>Cancel</button>
+							<button type="button" className="addBook__btn addBook__btn--secondary" onClick={this.handleCancelDialog.bind(this)}>Cancel</button>
 							<button className="addBook__btn" type="submit" value="Submit">Add</button>
 						</div>
 					</form>

@@ -1,0 +1,34 @@
+{
+	"books": [
+    {
+				"title": "Lincoln in the Bardo",
+			 "author": "George Saunders",
+			 "price": "$16.02",
+			 "cover": "https://images-na.ssl-images-amazon.com/images/I/A1wrnfowm8L._AC_SR201,266_.jpg"
+		},
+		{
+			 "title": "Exit West",
+			 "author": "Mohsin Hamid",
+			 "price": "$16.75",
+			 "cover": "https://images-na.ssl-images-amazon.com/images/I/514KmtX%2BMGL._AC_SR201,266_.jpg"
+		},
+		{
+			 "title": "Sing, Unburied, Sing",
+			 "author": "Jesmyn Ward",
+			 "price": "$17.68",
+			 "cover": "https://images-na.ssl-images-amazon.com/images/I/81NlYoIFeSL._AC_SR201,266_.jpg"
+		},
+		{
+			 "title": "You Play The Girl",
+			 "author": "Carina Chocano",
+			 "price": "$11.52",
+			 "cover": "https://images-na.ssl-images-amazon.com/images/I/61VnBL3lu2L._AC_SR201,266_.jpg"
+		},
+		{
+			 "title": "Far From The Tree",
+			 "author": "Robin Benway",
+			 "price": "$12.59",
+			 "cover": "https://images-na.ssl-images-amazon.com/images/I/61Rf4Ex7LPL._AC_SR201,266_.jpg"
+		}
+	]
+}

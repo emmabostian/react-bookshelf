@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import uuid from 'uuid';
+
 export default class AddBook extends Component {
 	constructor() {
 		super();
@@ -26,9 +28,10 @@ export default class AddBook extends Component {
 			this.setState({
 				newBook: {
 					title: this.refs.title.value,
-					author: this.refs.authors.value
+					author: this.refs.authors.value,
+					id: uuid.v4()
 				}
-			}, (newBook) => {
+			}, () => {
 				this.props.addBook(this.state.newBook);
 			});
 		}

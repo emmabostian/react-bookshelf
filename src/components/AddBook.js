@@ -45,7 +45,7 @@ export default class AddBook extends Component {
 
 		return (
 			<div className={this.props.showAddBookDialog ? ['addBook addBook--visible'] : ['addBook']}>
-				<button onClick={hideAddBookDialog}>X</button>
+				<button onClick={this.props.handleShowAddBookDialog}>X</button>
 				<h3>Add Book</h3> 
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<div>

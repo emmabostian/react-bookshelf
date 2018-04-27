@@ -73,6 +73,7 @@ class App extends Component {
         <AddBook 
           addBook={this.handleAddBook.bind(this)}
           showAddBookDialog={this.state.showAddBookDialog}
+          handleShowAddBookDialog={this.handleShowAddBookDialog.bind(this)}
         />
       </div>
     );
